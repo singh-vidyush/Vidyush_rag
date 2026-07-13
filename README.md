@@ -89,7 +89,8 @@ pip install -r requirements.txt
 Create a `.env` file:
 
 ```env
-GEMINI_API=your_api_key
+GEMINI_API=your_gemini_api_key
+HF_API=your_huggingface_api_key
 ```
 
 ---
@@ -104,10 +105,15 @@ Example:
 
 ```text
 Ask question...
-What is GPT-3.5?
+tell me about rag.
 
 Answer:
-GPT-3.5 is a large language model developed by OpenAI...
+========== RETRIEVED DOCS ==========
+Retrieval-Augmented Generation (RAG) is a technique used to optimize the output of an LLM by referencing an authoritative knowledge base outside of its original training data.
+
+In the context of LLM architecture, RAG functions as a bridge between the model's pre-trained weights and external, private, or real-time data. The process typically follows these steps:
+
+1.  **Retrieval:** When a prompt is submitted, the syst...
 ```
 
 ---
